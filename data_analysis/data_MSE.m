@@ -69,21 +69,6 @@ for scale_group = 1:size(B,2)
     close;
 end
 
-%% SR_mse
-% subplot(1,2,1)
-% SR = (Tau-1)./(Alpha-1);
-% srd = abs(SR-G);
-% plot(SYN_plot,srd,LineWidth=4);
-% hold on
-% p = polyfit(SYN_plot,srd,3); % 返回多项式系数
-% x = linspace(min(SYN_plot), max(SYN_plot), 100);
-% y = polyval(p, x);
-% plot(x,y,'--',LineWidth=2)
-% %semilogy(SYN_plot,srd);
-% hold off
-% xlabel('g-MS');ylabel('$\frac{\tau-1}{\alpha-1}-\gamma$',Interpreter='latex')
-% grid on
-% set(gca,'LineWidth',2,fontname='Arial',fontsize=16)
 
 %% MSE
 subplot(1,2,2)
