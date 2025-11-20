@@ -14,11 +14,7 @@ for scale_group = 1:size(B,2)
     x_plot = [];
     t_plot = [];
     S_T = [];
-    % if scale_group == size(B,2)+1
-    %     sublist = last_group;
-    % else
-    % sublist = B(:,scale_group);
-    % end
+
     sublist = B(:,scale_group);
     for sub = 1:length(sublist)
         load(['avadet+lv\threshold=',num2str(threshold),'\ava',num2str(sublist(sub)),'.mat'])
