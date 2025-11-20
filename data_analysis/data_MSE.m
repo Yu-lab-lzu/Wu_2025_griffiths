@@ -17,7 +17,7 @@ for scale_group = 1:size(B,2)
 
     sublist = B(:,scale_group);
     for sub = 1:length(sublist)
-        load(['avadet+lv\threshold=',num2str(threshold),'\ava',num2str(sublist(sub)),'.mat'])
+        load(['..\threshold=',num2str(threshold),'\ava',num2str(sublist(sub)),'.mat'])
 
         x_plot = [x_plot;x];
         t_plot = [t_plot;t];
