@@ -26,7 +26,7 @@ for  sub=1:length(sublist)
     syn_W(sub) = syn;
     syn_entropy_W(sub) = syn_entropy;
     %
-    chimera_index(sub) = chimera_index_246(BOLD,246);
+    
     %syn_synEntropy sub system   
     for ii = 1:size(module,2)
     inputsignal = BOLD(:,module{ii}); 
@@ -94,7 +94,7 @@ for scale_group = 1:size(B,2)
     for tt = 1:max(t_plot)
         S_T(tt) = mean(x_plot(find(t_plot==tt)));
     end
-    g = polyfit(log(2:7),log(S_T(2:7)),1);
+    g = polyfit(log(2:20),log(S_T(2:20)),1);
     
     G(ii)=g(1);
 end
@@ -143,9 +143,3 @@ y = mean((Tau-1)./(Alpha-1))*(x-1)+1;
 plot(x,y,'k--',LineWidth=4)
 save('sr.mat',"Alpha","Tau","G","SYN_plot");
 
-
-a = 1:20
-x = log(a)
-y = log(S_T(a))
-
-loglog(1:29,log(S_T))
